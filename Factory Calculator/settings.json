@@ -1,0 +1,40 @@
+{
+	"stone":
+	{
+		"ItemName" : "stone",
+		"Ingredients" : null,
+		"Craft_Time" : null,
+		"Amount" : null
+	},
+	"furnace":
+	{
+		"ItemName":"furnace",
+		"Ingredients":
+		{
+			"stone":5
+		},
+		"Craft_Time":0.5,
+		"Amount":1
+	},
+	"furnace2":
+	{
+		"ItemName":"furnace2",
+		"Ingredients":
+		{
+			"furnace":5
+		},
+		"Craft_Time":0.5,
+		"Amount":1
+	},
+	"furnace3":
+	{
+		"ItemName":"furnace3",
+		"Ingredients":
+		{
+			"furnace2":1,
+			"furnace":5
+		},
+		"Craft_Time":0.5,
+		"Amount":1
+	}
+}

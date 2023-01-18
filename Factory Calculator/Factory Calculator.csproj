@@ -7,4 +7,10 @@
     <AssemblyName>FactoryCalculator</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="settings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
