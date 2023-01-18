@@ -8,7 +8,6 @@ namespace Factory_Calculator
 {
 	public class Item
 	{
-		public string ItemName { get; set; }
 		public Dictionary<String, int> Ingredients { get; set; }
 		public float? Craft_Time { get; set; }
 		public int? Amount { get; set; }
@@ -23,7 +22,7 @@ namespace Factory_Calculator
 		{
 			ItemFactoryTotals = new Dictionary<string, float>();
 
-			string filename = args.Length == 0 ? "settings.json" : args[0];
+			string filename = args.Length == 0 ? "recipies.json" : args[0];
 
 			if (File.Exists(filename))
 			{
@@ -32,10 +31,24 @@ namespace Factory_Calculator
 				{
 					Items = JsonSerializer.Deserialize<Dictionary<string, Item>>(jsonText)!;
 
-					Console.WriteLine("What do you want to craft?");
-					string itemToCraft = Console.ReadLine().Trim().ToLower();
 
-					Calculate(Items[itemToCraft]);
+					bool b = true;
+					while(b){
+						Console.WriteLine("What do you want to craft?");
+						string itemToCraft = Console.ReadLine().Trim().ToLower();
+						
+						if (Items.ContainsKey(itemToCraft))
+						{
+							Calculate(Items[itemToCraft]);
+							b = false;
+                        }
+                        else
+                        {
+							Console.WriteLine("Invalid Item Name, Press Any Key To Continue...");
+							Console.ReadKey();
+							Console.Clear();
+                        }
+					}
 				}
 				catch (Exception e)
 				{
@@ -45,7 +58,7 @@ namespace Factory_Calculator
 			}
 			else
 			{
-				Console.WriteLine("File does not exist! (default file name: settings.json)");
+				Console.WriteLine("File does not exist! (default file name: recipies.json)");
 				Environment.Exit(1);
 			}
         }
