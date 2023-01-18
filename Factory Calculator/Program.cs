@@ -41,13 +41,13 @@ namespace Factory_Calculator
 						{
 							Calculate(Items[itemToCraft]);
 							b = false;
-                        }
-                        else
-                        {
+						}
+						else
+						{
 							Console.WriteLine("Invalid Item Name, Press Any Key To Continue...");
 							Console.ReadKey();
 							Console.Clear();
-                        }
+						}
 					}
 				}
 				catch (Exception e)
@@ -61,32 +61,39 @@ namespace Factory_Calculator
 				Console.WriteLine("File does not exist! (default file name: recipies.json)");
 				Environment.Exit(1);
 			}
-        }
+		}
 
 		static void Calculate(Item itemToCraft, bool init = true)
-        {
+		{
 			foreach(KeyValuePair<string, int> kvp in itemToCraft.Ingredients)
-            {
-				if (Items[kvp.Key].Ingredients != null)
+			{
+				if (Items.ContainsKey(kvp.Key))
 				{
-					Item crafting = Items[kvp.Key];
-					float ratio = (float)((kvp.Value * crafting.Craft_Time)/ crafting.Amount / itemToCraft.Craft_Time);
+					if (Items[kvp.Key].Ingredients != null)
+					{
+						Item crafting = Items[kvp.Key];
+						float ratio = (float)((kvp.Value * crafting.Craft_Time) / crafting.Amount / itemToCraft.Craft_Time);
 
-                    if (ItemFactoryTotals.ContainsKey(kvp.Key))
-                    {
-						ItemFactoryTotals[kvp.Key] += ratio;
-                    }
-                    else
-                    {
-						ItemFactoryTotals.Add(kvp.Key, ratio);
-                    }
+						if (ItemFactoryTotals.ContainsKey(kvp.Key))
+						{
+							ItemFactoryTotals[kvp.Key] += ratio;
+						}
+						else
+						{
+							ItemFactoryTotals.Add(kvp.Key, ratio);
+						}
 
-					Calculate(crafting, false);
+						Calculate(crafting, false);
+					}
 				}
-            }
+				else
+				{
+					Console.WriteLine($"Error: No item with name {kvp.Key}");
+				}
+			}
 
-            if (init)
-            {
+			if (init)
+			{
 				foreach (KeyValuePair<string, float> kvp in ItemFactoryTotals)
 				{
 					Console.WriteLine($"{kvp.Key} machines needed: {MathF.Ceiling(kvp.Value)}");
@@ -94,7 +101,7 @@ namespace Factory_Calculator
 				Console.WriteLine("\nPress Any Key To Continue...");
 				Console.ReadKey();
 			}
-        }
+		}
 
-    }
+	}
 }
