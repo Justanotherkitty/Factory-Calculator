@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Factory Calculator": {
+      "commandName": "Project",
+      "commandLineArgs": "/f"
+    }
+  }
+}
