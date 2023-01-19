@@ -1,5 +1,4 @@
 {
-	//dummy items so the raw materials show up
 	"_drill": {
 		"Ingredients": null,
 		"Craft_Time": null,
@@ -10,39 +9,46 @@
 		"Craft_Time": null,
 		"Amount": null
 	},
-	"_offshorePump": {
+	"_offshore_pump": {
 		"Ingredients": null,
 		"Craft_Time": null,
 		"Amount": null
 	},
-	//raw materials (all set to 1/s to show how many you need per second)
+
 	"stone": {
 		"Ingredients": {
 			"_drill": 1
 		},
-		"Craft_Time": 2,
+		"Craft_Time": 1,
 		"Amount": 1
 	},
-	"ironOre": {
+	"iron_ore": {
 		"Ingredients": {
 			"_drill": 1
 		},
-		"Craft_Time": 2,
+		"Craft_Time": 1,
 		"Amount": 1
 	},
-	"copperOre": {
+	"copper_ore": {
 		"Ingredients": {
 			"_drill": 1
 		},
-		"Craft_Time": 2,
+		"Craft_Time": 1,
 		"Amount": 1
 	},
-	"uraniumOre": {
+	"coal": {
+		"Ingredients": {
+			"_drill": 1
+		},
+		"Craft_Time": 1,
+		"Amount": 1
+	},
+	"uranium_ore": {
 		"Ingredients": {
 			"_drill": 1,
 			"sulfuricAcid": 1
 		},
-		"Craft_Time": 2,
+		"Craft_Time": 1,
 		"Amount": 1
 	},
 	"oil": {
@@ -54,14 +60,263 @@
 	},
 	"water": {
 		"Ingredients": {
-			"_offshorePump": 1
+			"_offshore_pump": 1
 		},
 		"Craft_Time": 1,
 		"Amount": 1
 	},
-	//Logistics tab
 
-	//Production tab
+
+	"iron_plate": {
+		"Ingredients": {
+			"iron_ore": 1
+		},
+		"Craft_Time": 3.2,
+		"Amount": 1
+	},
+
+	"copper_plate": {
+		"Ingredients": {
+			"copper_ore": 1
+		},
+		"Craft_Time": 3.2,
+		"Amount": 1
+	},
+
+	"steel_plate": {
+		"Ingredients": {
+			"iron_plate": 5
+		},
+		"Craft_Time": 16,
+		"Amount": 1
+	},
+
+	"petroleum": {
+		"Ingredients": {
+			"oil": 100,
+			"water": 50
+		},
+		"Craft_Time": 5,
+		"Amount": 30
+	},
+
+	"light_oil": {
+		"Ingredients": {
+			"oil": 100,
+			"water": 50
+		},
+		"Craft_Time": 5,
+		"Amount": 70
+	},
+
+	"heavy_oil": {
+		"Ingredients": {
+			"oil": 100,
+			"water": 50
+		},
+		"Craft_Time": 5,
+		"Amount": 20
+	},
+
+	"sulfuric_acid": {
+		"Ingredients": {
+			"sulfur": 5,
+			"water": 100,
+			"iron_plate": 1
+		},
+		"Craft_Time": 1,
+		"Amount": 50
+	},
+
+	"sand": {
+		"Ingredients": {
+			"stone": 1
+		},
+		"Craft_Time": 0.5,
+		"Amount": 2
+	},
+
+	"stone_brick": {
+		"Ingredients": {
+			"stone": 2
+		},
+		"Craft_Time": 3.2,
+		"Amount": 1
+	},
+
+	"stone_tablet": {
+		"Ingredients": {
+			"stone_brick": 1
+		},
+		"Craft_Time": 0.5,
+		"Amount": 4
+	},
+
+	"glass": {
+		"Ingredients": {
+			"sand": 4
+		},
+		"Craft_Time": 4,
+		"Amount": 1
+	},
+
+	"copper_cable": {
+		"Ingredients": {
+			"copper_plate": 1
+		},
+		"Craft_Time": 0.5,
+		"Amount": 2
+	},
+
+	"plastic_bar": {
+		"Ingredients": {
+			"petroleum": 20,
+			"coal": 1
+		},
+		"Craft_Time": 1,
+		"Amount": 2
+	},
+
+	"iron_gear_wheel": {
+		"Ingredients": {
+			"iron_plate": 2
+		},
+		"Craft_Time": 0.5,
+		"Amount": 1
+	},
+
+	"sulfur": {
+		"Ingredients": {
+			"petroleum": 30,
+			"water": 30
+		},
+		"Craft_Time": 1,
+		"Amount": 2
+	},
+
+	"electronic_circuit": {
+		"Ingredients": {
+			"copper_cable": 3,
+			"stone_tablet": 1
+		},
+		"Craft_Time": 0.5,
+		"Amount": 1
+	},
+
+	"advanced_circuit": {
+		"Ingredients": {
+			"copper_cable": 4,
+			"electronic_circuit": 2,
+			"plastic_bar": 2
+		},
+		"Craft_Time": 6,
+		"Amount": 1
+	},
+
+	"processing_unit": {
+		"Ingredients": {
+			"electronic_circuit": 20,
+			"advanced_circuit": 2,
+			"sulfuric_acid": 5
+		},
+		"Craft_Time": 10,
+		"Amount": 1
+	},
+
+	"small_electric_motor": {
+		"Ingredients": {
+			"iron_gear_wheel": 1,
+			"copper_cable": 6,
+			"iron_plate": 1
+		},
+		"Craft_Time": 0.8,
+		"Amount": 1
+	},
+
+	"battery": {
+		"Ingredients": {
+			"iron_plate": 1,
+			"copper_plate": 1,
+			"sulfuric_acid": 20
+		},
+		"Craft_Time": 4,
+		"Amount": 1
+	},
+
+	"low_density_structure": {
+		"Ingredients": {
+			"plastic_bar": 10,
+			"copper_plate": 10,
+			"glass": 10,
+			"steel_plate": 5
+		},
+		"Craft_Time": 10,
+		"Amount": 1
+	},
+
+	"solar_panel": {
+		"Ingredients": {
+			"electronic_circuit": 15,
+			"copper_plate": 5,
+			"glass": 5,
+			"steel_plate": 5
+		},
+		"Craft_Time": 10,
+		"Amount": 1
+	},
+
+	"accumulator": {
+		"Ingredients": {
+			"battery": 5,
+			"iron_plate": 2
+		},
+		"Craft_Time": 10,
+		"Amount": 1
+	},
+
+	"solid_fuel": {
+		"Ingredients": {
+			"heavy_oil": 20
+		},
+		"Craft_Time": 0.5,
+		"Amount": 1
+	},
+
+	"solid_rocket_fuel": {
+		"Ingredients": {
+			"solid_fuel": 10,
+			"light_oil": 10
+		},
+		"Craft_Time": 1,
+		"Amount": 1
+	},
+
+	"radar": {
+		"Ingredients": {
+			"small_electric_motor": 4,
+			"electronic_circuit": 8,
+			"stone_brick": 4,
+			"iron_plate": 20
+		},
+		"Craft_Time": 0.5,
+		"Amount": 1
+	},
+
+	"navigation_satellite": {
+		"Ingredients": {
+			"battery": 100,
+			"advanced_circuit": 50,
+			"low_density_structure": 50,
+			"solar_panel": 10,
+			"accumulator": 10,
+			"solid_rocket_fuel": 50,
+			"glass": 100,
+			"radar": 5
+		},
+		"Craft_Time": 200,
+		"Amount": 1
+	},
+
 	"furnace": {
 		"Ingredients": {
 			"stone": 5
@@ -70,13 +325,4 @@
 		"Amount": 1
 	}
 
-	//Resources tab
-
-	//Manufacturing tab
-
-	//Science tab
-
-	//Equipment/combat tab
-
-	//Fluids tab
 }
