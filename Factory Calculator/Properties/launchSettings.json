@@ -1,7 +1,8 @@
 {
   "profiles": {
     "Factory Calculator": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "modded_recipies.json"
     }
   }
 }

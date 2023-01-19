@@ -1,5 +1,4 @@
 {
-	//dummy items so the raw materials show up
 	"_drill": {
 		"Ingredients": null,
 		"Craft_Time": null,
@@ -10,39 +9,46 @@
 		"Craft_Time": null,
 		"Amount": null
 	},
-	"_offshorePump": {
+	"_offshore_pump": {
 		"Ingredients": null,
 		"Craft_Time": null,
 		"Amount": null
 	},
-	//raw materials (all set to 1/s to show how many you need per second)
+
 	"stone": {
 		"Ingredients": {
 			"_drill": 1
 		},
-		"Craft_Time": 2,
+		"Craft_Time": 1,
 		"Amount": 1
 	},
-	"ironOre": {
+	"iron_ore": {
 		"Ingredients": {
 			"_drill": 1
 		},
-		"Craft_Time": 2,
+		"Craft_Time": 1,
 		"Amount": 1
 	},
-	"copperOre": {
+	"copper_ore": {
 		"Ingredients": {
 			"_drill": 1
 		},
-		"Craft_Time": 2,
+		"Craft_Time": 1,
 		"Amount": 1
 	},
-	"uraniumOre": {
+	"coal": {
+		"Ingredients": {
+			"_drill": 1
+		},
+		"Craft_Time": 1,
+		"Amount": 1
+	},
+	"uranium_ore": {
 		"Ingredients": {
 			"_drill": 1,
 			"sulfuricAcid": 1
 		},
-		"Craft_Time": 2,
+		"Craft_Time": 1,
 		"Amount": 1
 	},
 	"oil": {
@@ -59,9 +65,7 @@
 		"Craft_Time": 1,
 		"Amount": 1
 	},
-	//Logistics tab
 
-	//Production tab
 	"furnace": {
 		"Ingredients": {
 			"stone": 5
@@ -70,13 +74,4 @@
 		"Amount": 1
 	}
 
-	//Resources tab
-
-	//Manufacturing tab
-
-	//Science tab
-
-	//Equipment/combat tab
-
-	//Fluids tab
 }
